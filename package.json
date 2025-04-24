@@ -1,0 +1,28 @@
+{
+  "name": "custome-form-plugin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "postcss:watch": "postcss assets/postcss/style.css --output assets/css/style.css --watch",
+    "build": "postcss assets/postcss/style.css --output assets/css/style.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "postcss-custom-media": "^11.0.5",
+    "postcss-partial-import": "^4.1.0",
+    "postcss-preset-env": "^10.1.5"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "cssnano": "^7.0.6",
+    "post-cli": "^1.0.5",
+    "postcss": "^8.5.3",
+    "postcss-cli": "^11.0.1",
+    "postcss-import": "^16.1.0",
+    "postcss-nested": "^7.0.2"
+  }
+}

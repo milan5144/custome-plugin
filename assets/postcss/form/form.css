@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f8;
+    padding: 2rem;
+  }
+  
+  .form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #e5e5e5;
+    border-radius: 12px;
+    box-shadow: 0 50px 50px rgba(0, 0, 0, 0.06);
+  
+    &__field {
+      margin-bottom: 1.5rem;
+    }
+  
+    &__label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      color: #333;
+    }
+  
+    &__input,
+    &__select {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+      background-color: #fefefe;
+      transition: border-color 0.3s ease;
+  
+      &:focus {
+        border-color: #0073aa;
+        outline: none;
+      }
+    }
+  
+    &__submit {
+      text-align: center;
+      margin-top: 2rem;
+    }
+  
+    &__button {
+      width: 60%;
+      background: linear-gradient(to right, #0073aa, #005177);
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+  
+      &:hover {
+        background: linear-gradient(to right, #005177, #003f5c);
+      }
+    }
+  
+    &__radio-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+  
+      .form__radio {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+  
+        label {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          font-size: 0.95rem;
+          cursor: pointer;
+        }
+  
+        input[type="radio"] {
+          accent-color: #0073aa;
+        }
+      }
+    }
+  }
+  
+  .admin {
+    &__meta-list {
+      list-style-type: none;
+      padding: 0;
+  
+      li {
+        margin-bottom: 0.75rem;
+        font-size: 0.95rem;
+        color: #444;
+      }
+    }
+  }
+  
+  .admin-meta {
+  padding: 20px;
+  background-color: #f8f9fa;
+  border: 1px solid #dcdcdc;
+  border-radius: 10px;
+  font-family: "Segoe UI", sans-serif;
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}  
+
