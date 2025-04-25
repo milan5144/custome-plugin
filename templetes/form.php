@@ -1,38 +1,32 @@
 <?php
-
-/**
- * Template: Form Layout
- *
- * This file outputs the form for front-end display.
- *
- * Available variables:
- *  - $form_fields: An associative array of form fields (e.g., [ 'name' => 'Name', 'email' => 'Email' ]).
- */
-
-if (! defined('ABSPATH')) {
+// Exit if accessed directly.
+if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-// Start form markup.
+// Get all form fields via the Form_Plugin_Form class
+$form_fields = ( new Form_Plugin_Form() )->get_form_fields();
 ?>
-<form action="#" method="post" class="form">
+
+<form method="post" class="form">
     <?php
-    /**
-     * Output a nonce field for security to protect against CSRF.
-     */
-    wp_nonce_field('form_submissions_action', 'form_submissions_nonce');
+    // Nonce field for security
+    wp_nonce_field( 'form_submissions_action', 'form_submissions_nonce' );
 
-    /**
-     * Loop through all fields defined in $form_fields and include the
-     * `form-field.php` template to render each field individually.
-    */
-    foreach ($form_fields as $field_name => $field_label) {
-
-        include plugin_dir_path(__FILE__) . 'form-field.php';
+    // Loop through and render all form fields
+    foreach ( $form_fields as $field_name => $field_label ) {
+        echo Input_Field::render(
+            $field_name === 'email' ? 'email' : 'text',
+            $field_name,
+            $field_label
+        );
     }
     ?>
-    <!-- Submit button container -->
+
+    <!-- Submit Button -->
     <div class="form__submit">
-        <input class="form__button" type="submit" value="<?php echo esc_attr__('Submit', 'form-submissions'); ?>">
+        <button class="form__button" type="submit">
+            <?php echo esc_html__( 'Submit', 'form-submissions' ); ?>
+        </button>
     </div>
 </form>
