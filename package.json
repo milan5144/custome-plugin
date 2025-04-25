@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "postcss:watch": "postcss assets/postcss/style.css --output assets/css/style.css --watch",
-    "build": "postcss assets/postcss/style.css --output assets/css/style.css"
+    "postcss:watch": "postcss assets/postcss/style.css --output assets/css/style.min.css --watch",
+    "build": "postcss assets/postcss/style.css --output assets/css/style.min.css"
   },
   "keywords": [],
   "author": "",
